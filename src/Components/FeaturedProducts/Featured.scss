@@ -1,0 +1,97 @@
+.featuredProducts {
+  margin: 100px 200px;
+  padding: 20px; /* Added padding for better spacing on smaller screens */
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-direction: column;
+
+    h1 {
+      flex: 2;
+      text-transform: capitalize;
+      font-size: 7vw;
+      color: white;
+    }
+    p {
+      flex: 3;
+      color: gray;
+    }
+    p > span {
+      margin-left: 3.5vw;
+    }
+  }
+  .bottom {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  }
+}
+
+@media (max-width: 1200px) {
+  .featuredProducts {
+    margin: 80px 100px; /* Adjusted margin for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .featuredProducts {
+    margin: 60px 50px; /* Adjusted margin for small screens */
+
+    .top {
+      flex-direction: column; /* Stack elements vertically on small screens */
+      text-align: center;
+
+      h1,
+      p {
+        flex: 1;
+        margin-bottom: 20px; /* Add some space between the elements */
+      }
+    }
+
+    .bottom {
+      gap: 30px; /* Reduced gap for smaller screens */
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .featuredProducts {
+    margin: 40px 20px; /* Adjusted margin for extra small screens */
+
+    .top {
+      h1 {
+        font-size: 24px; /* Smaller font size for headings */
+      }
+      p {
+        font-size: 16px; /* Smaller font size for paragraph */
+      }
+    }
+
+    .bottom {
+      gap: 20px; /* Further reduced gap for extra small screens */
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .featuredProducts {
+    margin: 20px 10px; /* Adjusted margin for very small screens */
+
+    .top {
+      h1 {
+        font-size: 20px; /* Further reduced font size for headings */
+      }
+      p {
+        font-size: 14px; /* Further reduced font size for paragraph */
+      }
+    }
+
+    .bottom {
+      gap: 10px; /* Minimal gap for very small screens */
+    }
+  }
+}

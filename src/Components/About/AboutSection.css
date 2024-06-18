@@ -1,0 +1,133 @@
+.about {
+  height: auto; /* Adjust height to auto for small screens */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Reduced margin-top for small screens */
+  flex-wrap: wrap;
+  padding-bottom: 20vh; /* Added padding at the bottom */
+  margin-top: 50vh;
+}
+
+.leftAbout,
+.rightAbout {
+  height: auto; /* Adjust height to auto for small screens */
+  width: 100%; /* Full width on smaller screens */
+  margin-bottom: 2vh; /* Space between sections on smaller screens */
+}
+
+.leftAbout > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
+.rightAbout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topAbout {
+  height: auto; /* Adjust height to auto for small screens */
+  width: 80%;
+}
+
+.bottomAbout {
+  height: auto; /* Adjust height to auto for small screens */
+  width: 80%;
+  margin-top: 3vh;
+}
+
+.topAbout > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+}
+
+.bottomAbout > p {
+  color: rgba(255, 255, 255, 0.372);
+  line-height: 1.5;
+  font-size: 1em; /* Ensure text is readable on small screens */
+}
+
+/* Responsive Design */
+
+@media (min-width: 768px) {
+  .about {
+    margin-top: 10vh; /* Adjust margin for medium screens */
+    padding-bottom: 0; /* Remove padding at the bottom */
+  }
+
+  .leftAbout,
+  .rightAbout {
+    width: 45vw; /* Adjust width on medium screens and above */
+    margin-bottom: 0; /* Remove space between sections */
+  }
+
+  .leftAbout {
+    width: 30vw; /* Adjust width of left section */
+  }
+
+  .rightAbout {
+    width: 60vw; /* Adjust width of right section */
+  }
+
+  .topAbout,
+  .bottomAbout {
+    height: 70%; /* Adjust height for medium screens */
+    width: 80%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    margin-top: 0; /* Remove margin for larger screens */
+    height: 100vh; /* Set height to 100vh for larger screens */
+  }
+
+  .leftAbout,
+  .rightAbout {
+    height: 80vh; /* Set height to 80vh for larger screens */
+  }
+
+  .leftAbout {
+    width: 30vw; /* Adjust width of left section */
+  }
+
+  .rightAbout {
+    width: 60vw; /* Adjust width of right section */
+  }
+
+  .topAbout,
+  .bottomAbout {
+    height: auto; /* Adjust height to auto */
+    width: 80%;
+  }
+}
+
+.aboutHead {
+  position: absolute;
+  color: white;
+  left: 5%;
+  font-size: 10vh; /* Adjusted font-size for smaller screens */
+  margin-bottom: 95vh;
+  flex-wrap: nowrap;
+  font-weight: 400;
+  letter-spacing: -10px;
+}
+
+/* Adjust font-size for larger screens */
+
+@media (min-width: 768px) {
+  .aboutHead {
+    font-size: 13vh; /* Medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .aboutHead {
+    font-size: 17vh; /* Larger screens */
+  }
+}

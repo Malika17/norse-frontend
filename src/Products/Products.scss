@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+
+.products {
+  padding: 30px 50px;
+  display: flex;
+  font-family: "Overpass";
+  background-color: black;
+  color: white;
+
+  .left {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    top: 50px;
+
+    .inputItem {
+      text-transform: uppercase;
+    }
+
+    .filterItem {
+      margin-bottom: 30px;
+
+      h2 {
+        font-weight: 400;
+        font-size: 5vh;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .right {
+    flex: 3;
+
+    .catImg {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+      margin-bottom: 50px;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .products {
+    flex-direction: column;
+    padding: 20px 30px;
+  }
+
+  .left {
+    position: relative;
+    top: 0;
+    margin-bottom: 20px;
+  }
+
+  .filterItem h2 {
+    font-size: 4vh;
+  }
+
+  .catImg {
+    height: 25vh;
+  }
+}

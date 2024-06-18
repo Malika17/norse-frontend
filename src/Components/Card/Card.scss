@@ -1,0 +1,68 @@
+.card {
+  width: 280px; /* Add 'px' to specify pixel value */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  position: relative;
+  color: white;
+  /* Add this to position the span correctly */
+
+  .image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative; /* Ensure images are positioned correctly */
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease; /* Add a transition for a smooth effect */
+    }
+
+    img.secondImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover img.secondImg {
+      opacity: 1;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 10px; /* Adjusted top position for better visibility */
+    left: 10px; /* Adjusted left position for better visibility */
+    background-color: white;
+    color: rgb(0, 0, 0);
+    z-index: 3;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 2px 5px; /* Added padding for better appearance */
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 100;
+    margin: 10px 0; /* Added margin for better spacing */
+    text-transform: uppercase;
+  }
+
+  .prices {
+    display: flex;
+    gap: 20px;
+
+    h3 {
+      font-size: 18px;
+      &:first-child {
+        color: gray;
+        text-decoration: line-through;
+      }
+    }
+  }
+}
